@@ -1,6 +1,10 @@
 package edu.apu.crs.usermanagement;
 
+import edu.apu.crs.courserecovery.CourseRecoveryDashboard;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginPage extends JFrame {
     public LoginPage() {
@@ -25,5 +29,21 @@ public class LoginPage extends JFrame {
         panel.add(loginButton);
 
         add(panel);
+
+        // 🔑 Hardcoded login check
+        loginButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String username = userText.getText();
+                String password = new String(passText.getPassword());
+
+                if(username.equals("admin") && password.equals("1234")) {
+                    JOptionPane.showMessageDialog(null, "Login successful!");
+                    dispose(); // close login window
+                    new CourseRecoveryDashboard().setVisible(true); // open dashboard
+                } else {
+                    JOptionPane.showMessageDialog(null, "Invalid username or password");
+                }
+            }
+        });
     }
 }

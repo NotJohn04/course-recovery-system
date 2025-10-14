@@ -1,2 +1,6 @@
+edu\apu\crs\usermanagement\Service\UserService.class
+edu\apu\crs\notification\NotificationService$1.class
 edu\apu\crs\App.class
-edu\apu\crs\usermanagement\LoginPage.class
+edu\apu\crs\courserecovery\CourseRecoveryDashboard.class
+edu\apu\crs\notification\NotificationService.class
+edu\apu\crs\usermanagement\Data\User.class

@@ -1,5 +1,8 @@
 package edu.apu.crs.usermanagement.GUI;
 import javax.swing.*;
+
+import edu.apu.crs.usermanagement.Data.UserDatabase;
+
 import java.awt.*;
 
 public class Login {
@@ -7,7 +10,22 @@ public class Login {
 
 
 
+private void openFormForRole(String role) {
+    switch (role) {
+        case "ADMIN":
+            new UserAccountForm().show();   // your User Manager form
+            break;
 
+       //case "OFFICER":
+        //   new UserAccountForm().show();   // your User Manager form
+          //  break; 
+
+       // case "STUDENT":
+           
+        default:
+           JOptionPane.showMessageDialog(null, "Unknown role: " + role);
+           break; }
+    }
 public Login() {
         // Create the main frame
         frame = new JFrame("SRC Technology Login");
@@ -75,6 +93,24 @@ public Login() {
         // ===== ADD PANELS TO FRAME =====
         frame.add(leftPanel);
         frame.add(rightPanel);
+
+     loginButton.addActionListener(e -> {
+    String username = usernameField.getText();
+    String password = new String(passwordField.getPassword());
+
+    if (UserDatabase.authenticate(username, password)) {
+        String role = UserDatabase.getRole(username);
+
+        JOptionPane.showMessageDialog(frame, "Login successful! Role: " + role);
+
+        frame.dispose(); // close login screen
+
+        // Open correct form
+        openFormForRole(role);
+    } else {
+        JOptionPane.showMessageDialog(frame, "Invalid username or password.");
+    }
+});
     }
 
     public void show() {
@@ -82,5 +118,6 @@ public Login() {
     }
 
 
-
 }
+
+   

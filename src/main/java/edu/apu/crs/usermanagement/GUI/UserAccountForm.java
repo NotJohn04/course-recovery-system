@@ -94,6 +94,11 @@ public class UserAccountForm {
     public JButton getDeactivateButton() { return deactivateButton; }
     public JButton getRefreshButton() { return refreshButton; }
 
+    public void show() {
+    frame.setVisible(true);
+}
+
+
     
 
 }

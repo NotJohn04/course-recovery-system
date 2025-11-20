@@ -14,6 +14,7 @@ public class UserAccountForm {
     private JComboBox<String> roleBox;
     private JComboBox<String> statusBox;
     private JButton addButton, updateButton, deactivateButton, refreshButton;
+    private JButton logoutButton;
 
     public UserAccountForm() {
         frame = new JFrame("User Account Management");
@@ -80,6 +81,11 @@ public class UserAccountForm {
         refreshButton.setBounds(380, 420, 100, 30);
         frame.add(refreshButton);
 
+        JButton logoutButton = new JButton("Logout");
+        logoutButton.setBounds(30, 420, 100, 30);
+        frame.add(logoutButton);
+
+
         frame.setVisible(true);
     }
 
@@ -93,12 +99,9 @@ public class UserAccountForm {
     public JButton getUpdateButton() { return updateButton; }
     public JButton getDeactivateButton() { return deactivateButton; }
     public JButton getRefreshButton() { return refreshButton; }
-
+    public JButton getLogoutButton() {return logoutButton;}
     public void show() {
     frame.setVisible(true);
 }
-
-
-    
 
 }

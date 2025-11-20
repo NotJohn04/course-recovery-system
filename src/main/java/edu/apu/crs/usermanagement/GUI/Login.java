@@ -6,8 +6,8 @@ import edu.apu.crs.usermanagement.Data.UserDatabase;
 import java.awt.*;
 
 public class Login {
-        private JFrame frame;
-
+      
+    private JFrame frame;
 
 
 private void openFormForRole(String role) {
@@ -26,6 +26,8 @@ private void openFormForRole(String role) {
            JOptionPane.showMessageDialog(null, "Unknown role: " + role);
            break; }
     }
+
+
 public Login() {
         // Create the main frame
         frame = new JFrame("SRC Technology Login");
@@ -115,6 +117,12 @@ public Login() {
 
     public void show() {
         frame.setVisible(true);
+    }
+
+
+    public void hide() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'hide'");
     }
 
 

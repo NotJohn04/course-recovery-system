@@ -1,13 +1,12 @@
 package edu.apu.crs;
 
 import javax.swing.SwingUtilities;
-import edu.apu.crs.usermanagement.LoginPage;
+import edu.apu.crs.UserManager.gui.LoginPage;
 
 public class App {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            LoginPage login = new LoginPage();
-            login.setVisible(true);
+            new LoginPage();
         });
     }
 }

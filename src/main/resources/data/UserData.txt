@@ -1,0 +1,7 @@
+username,password,role,isActive
+admin,admin123,ADMIN,true
+officer1,pass1,OFFICER,true
+officer2,pass2,OFFICER,true
+officer3,pass3,OFFICER,true
+officer4,pass4,OFFICER,true
+

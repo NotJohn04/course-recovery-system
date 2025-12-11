@@ -288,7 +288,7 @@ public class CourseRecoveryDashboard extends JFrame {
 
         loginEmail.addActionListener(e ->
                 notificationService.sendRecoveryProgressUpdate(
-                        "thamkingjoe9@gmail.com",
+                        "evelai1213@gmail.com",
                         "Login Activity",
                         "System Access",
                         "Logged In"
